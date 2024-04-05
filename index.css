@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1d2b3a;
+}
+
+.inputBox {
+  position: relative;
+  width: 300px;
+}
+
+.inputBox input {
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  border-radius: 5px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 1em;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 15px 20px;
+  pointer-events: none;
+  font-size: 1em;
+  transition: 0.5s;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.1em;
+}
+
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span {
+  color: #1d2b3a;
+  font-size: 0.75em;
+  transform: translateX(20px) translateY(-7px);
+  padding: 0 5px;
+  background: #00dfc4;
+  border-radius: 2px;
+}
+
+#toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  background: url("./show.svg");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  color: #00dfc4;
+}
+
+#toggle.hide {
+  background: url(hide.svg);
+  background-size: cover;
+}
